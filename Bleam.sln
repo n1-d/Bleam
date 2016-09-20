@@ -3,7 +3,13 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
 VisualStudioVersion = 14.0.25123.0
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Bleam", "CET_Tutorial\Bleam.csproj", "{D70418AB-71AC-4A2E-9B85-4DC076E28C30}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Bleam", "Bleam\Bleam.csproj", "{D70418AB-71AC-4A2E-9B85-4DC076E28C30}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{284D1662-DE24-40AE-8B69-37496304A948}"
+	ProjectSection(SolutionItems) = preProject
+		Bleam\Properties\AssemblyInfo.cs = Bleam\Properties\AssemblyInfo.cs
+		WorkingClassCuck.cs = WorkingClassCuck.cs
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

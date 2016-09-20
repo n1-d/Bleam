@@ -1,0 +1,91 @@
+long directorGlobals = ps.ReadInt64((long)tlsBase + 0x198);
+uint i30 = ps.ReadUInt32(directorGlobals + 152);    // unknown
+float f31 = ps.ReadSingle(directorGlobals + 156);   // x position
+float f32 = ps.ReadSingle(directorGlobals + 160);   // y position
+float f33 = ps.ReadSingle(directorGlobals + 164);   // z position
+float f34 = ps.ReadSingle(directorGlobals + 168);   // x position shift
+float f35 = ps.ReadSingle(directorGlobals + 172);   // y position shift
+float f36 = ps.ReadSingle(directorGlobals + 176);   // z position shift
+float f37 = ps.ReadSingle(directorGlobals + 180);   // horizontal look shift
+float f38 = ps.ReadSingle(directorGlobals + 184);   // vertical look shift
+float f39 = ps.ReadSingle(directorGlobals + 188);   // camera depth
+float f40 = ps.ReadSingle(directorGlobals + 192);   // fov
+float f2 = ps.ReadSingle(directorGlobals + 196);    // i forward look component
+float f3 = ps.ReadSingle(directorGlobals + 200);    // j forward look component
+float f4 = ps.ReadSingle(directorGlobals + 204);    // k forward look component
+float f5 = ps.ReadSingle(directorGlobals + 208);    // i up look component
+float f6 = ps.ReadSingle(directorGlobals + 212);    // j up look component
+float f7 = ps.ReadSingle(directorGlobals + 216);    // k up look component
+
+
+camera_fov	0x58ECF90	float
+clambering_enabled	0x47613B0	bool
+clients_always_respect_action_priority_for_weapon_switch	0x4FB1A38	bool
+debug_controller_latency	0x59FB940	bool
+disable_deferred_tag_loading	0x502B764	bool
+effects_corpse_nonviolent	0x594878E	bool
+effects_distortion_enabled	0x46EC553	bool
+effects_perf_armageddon	0x594878F	bool
+enable_bots	0x59FBAB1	bool
+enable_exclusive_mouse_input	0x4751FA0	bool
+enable_first_person_squish	0x4E9EEA8	bool
+enable_saved_film_history_render_wait	0x5B1A070	bool
+exposure_use_color_source	0x4E9A710	bool
+exposure_use_lighting_source	0x4E9A711	bool
+frame_tick_limit	0x59651E0	uint32_t
+g_isTutorial	0x670F598	bool
+guardian_kills_awarded_to_most_damage	0x72E5B50	bool
+ignore_predefined_performance_throttles	0x64AD758	bool
+ignore_tag_cache	0x73520B5	bool
+jump_use_custom_settings	0x4FDA290	bool
+kill_volumes_disable	0x5B1CB90	bool
+lightmapAnalyticScalar	0x4EA42E4	float
+lightmapDirectScalar	0x4EA42DC	float
+lightmapIndirectScalar	0x4EA42E0	float
+lights_update_enable_multithreading	0x470B988	bool
+lion_charge_melee_leap	0x6310810	bool
+look_at_heading_cooldown_max	0x4E79D38	uint32_t
+look_at_heading_cooldown_min	0x4E79D3C	uint32_t
+look_at_heading_duration_max	0x4E79D40	uint32_t
+look_at_heading_duration_min	0x4E79D44	uint32_t
+look_at_heading_enabled	0x6310800	bool
+minimum_havok_biped_object_acceleration	0x4FB9A74	float
+minimum_havok_object_acceleration	0x4FB9A70	float
+motion_blur_center_falloff_x	0x4EA42D4	float
+motion_blur_center_falloff_y	0x4EA42D8	float
+motion_blur_max	0x4EA42CC	float
+motion_blur_scale	0x4EA42D0	float
+multiplayer_map_intro_enabled	0x4724DE4	bool
+pup_current_puppet	0x670F57F	uint32_t
+pup_grief_counter	0x58EF720	uint32_t
+reduce_widescreen_fov_during_cinematics	0x64AD7B1	bool
+render_debug_depth_render	0x6442748	bool
+render_debug_depth_render_scale_b	0x4E981A8	float
+render_debug_depth_render_scale_g	0x4E981A4	float
+render_debug_depth_render_scale_r	0x4E981A0	float
+render_far_clip_distance	0x4E96C5C	float
+render_first_person_fov_scale	0x4E9EE94	float
+render_lightmap_shadows	0x4E9C678	bool
+render_low_res_transparents	0x4E9EC48	bool
+render_near_clip_distance	0x4E96C58	float
+render_postprocess_blue_filter	0x64AD4C0	float
+render_postprocess_green_filter	0x64AD4BC	float
+render_postprocess_hue	0x64AD4B0	float
+render_postprocess_red_filter	0x64AD4B8	float
+render_postprocess_saturation	0x64AD4B4	float
+render_screen_flashes	0x46FC0E9	bool
+revive_ai_can_be_revived	0x4735FD2	bool
+revive_ai_revives_ai	0x4FBF0D9	bool
+revive_ai_revives_player	0x4FBF0D8	bool
+revive_enabled	0x4735FD1	bool
+revive_enabled_mp	0x59FBAB3	bool
+skies_delete_on_zone_set_switch_enable	0x725EDA0	bool
+slide_to_crouch_enabled	0x4735FD0	bool
+sound_mute	0x5B2DC2B	bool
+tag_allocation_allowed	0x502B765	bool
+tap_button_timer	0x4735FD4	uint8_t
+texture_camera_exposure	0x4E98164	float
+texture_camera_illum_scale	0x4E98168	float
+texture_camera_near_plane	0x4E98160	float
+tracers_from_barrel_in_first_person	0x4701750	bool
+tracers_from_barrel_in_third_person	0x4701751	bool

@@ -10,13 +10,16 @@ using System.Diagnostics;
 using System.Runtime.InteropServices;
 using System.Globalization;
 
-namespace CET_Tutorial
+namespace Bleam
 {
 	public partial class hForm : Form
 	{
 		Memory oMemory = new Memory();
         //Process[] aProcesses = Process.GetProcessesByName("halo5forge");
+        //WorkingClassCuck WorkingCuck = new WorkingClassCuck(this);
 
+        
+        
         public hForm()
 		{
 			InitializeComponent();
@@ -55,9 +58,10 @@ namespace CET_Tutorial
 
         private void Wide_Screen_Enabler(object sender, EventArgs e)
         {
-           
+           //HACKS
+          // ThisWillError:^) SEARCH FOR THE FUCKING SHITTY RESOLUTION READ IT THO SO YA DON"T NEED TOO."
         }
-		private void FOV_CHANGER_Click(object sender, EventArgs e)
+        private void FOV_CHANGER_Click(object sender, EventArgs e)
 		{
             //FOV SHIT
             Process[] aProcesses = Process.GetProcessesByName("halo5forge");
@@ -78,6 +82,147 @@ namespace CET_Tutorial
                 oMemory.CloseHandle();
             }   
         }
+
+        private void Effects_Distortion_CheckedChanged(object sender, EventArgs e)
+        {
+            bool effedtoggle = System.Convert.ToBoolean(this.Effects_Distortion.Checked);
+            //46EC553
+            Process[] aProcesses = Process.GetProcessesByName("halo5forge");
+
+            if (effedtoggle == false)
+            {
+                //this.Effects_Distortion.BackColor = Color.Red; 
+                if (aProcesses.Length != 0)
+                {
+                    oMemory.ReadProcess = aProcesses[0];
+                    oMemory.Open();
+
+                    float effetoggle = 0;
+                    long FOV_Address = oMemory.BaseAddressD() + Addr.ToDec("46EC553");
+
+                    int bytesWritten;
+                    byte[] bValue_To_Write = BitConverter.GetBytes(effetoggle);
+
+                    oMemory.Write((IntPtr)FOV_Address, bValue_To_Write, out bytesWritten);
+
+
+                    oMemory.CloseHandle();
+                }
+            }
+            else if (effedtoggle == true)
+            {
+                //this.Effects_Distortion.ForeColor = Color.Green;
+                if (aProcesses.Length != 0)
+                {
+                    oMemory.ReadProcess = aProcesses[0];
+                    oMemory.Open();
+
+                    float effetoggle = 1;
+                    long FOV_Address = oMemory.BaseAddressD() + Addr.ToDec("46EC553");
+
+                    int bytesWritten;
+                    byte[] bValue_To_Write = BitConverter.GetBytes(effetoggle);
+                    oMemory.Write((IntPtr)FOV_Address, bValue_To_Write, out bytesWritten);
+                    oMemory.CloseHandle();
+                }
+            }
+        }
+
+        private void Debug_Controller_Latency_CheckedChanged(object sender, EventArgs e)
+        {
+            bool DebugControlLag = System.Convert.ToBoolean(this.Debug_Controller_Latency.Checked);
+            //46EC553
+            Process[] aProcesses = Process.GetProcessesByName("halo5forge");
+
+            if (DebugControlLag == false)
+            {
+                //this.Effects_Distortion.BackColor = Color.Red; 
+                if (aProcesses.Length != 0)
+                {
+                    oMemory.ReadProcess = aProcesses[0];
+                    oMemory.Open();
+
+                    float DebugControlLagv = 0;
+                    long FOV_Address = oMemory.BaseAddressD() + Addr.ToDec("59FB940");
+
+                    int bytesWritten;
+                    byte[] bValue_To_Write = BitConverter.GetBytes(DebugControlLagv);
+
+                    oMemory.Write((IntPtr)FOV_Address, bValue_To_Write, out bytesWritten);
+
+
+                    oMemory.CloseHandle();
+                }
+            }
+            else if (DebugControlLag == true)
+            {
+                //this.Effects_Distortion.ForeColor = Color.Green;
+                if (aProcesses.Length != 0)
+                {
+                    oMemory.ReadProcess = aProcesses[0];
+                    oMemory.Open();
+
+                    float DebugControlLagv = 1;
+                    long FOV_Address = oMemory.BaseAddressD() + Addr.ToDec("59FB940");
+
+                    int bytesWritten;
+                    byte[] bValue_To_Write = BitConverter.GetBytes(DebugControlLagv);
+                    oMemory.Write((IntPtr)FOV_Address, bValue_To_Write, out bytesWritten);
+                    oMemory.CloseHandle();
+                }
+            }
+        }
+
+        private void tabControl1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void tabPage2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+
+        //Fuck off Functions
+        /* private void ChexMexRecipe(Object but, String offset)
+         {
+
+             Process[] aProcesses = Process.GetProcessesByName("halo5forge");
+             bool toggle = System.Convert.ToBoolean(this.but.Checked);
+
+
+
+             if (toggle == false)
+             {
+                 if (aProcesses.Length != 0)
+                 {
+                     oMemory.ReadProcess = aProcesses[0]; oMemory.Open();
+                     float boolv = 0;
+                     long Check_Address = oMemory.BaseAddressD() + Addr.ToDec(offset);
+                     int bytesWritten;
+                     byte[] bValue_To_Write = BitConverter.GetBytes(boolv);
+                     oMemory.Write((IntPtr)Check_Address, bValue_To_Write, out bytesWritten);
+                     oMemory.CloseHandle();
+                 }
+             }
+             else if (toggle == true)
+             {
+                 if (aProcesses.Length != 0)
+                 {
+                     oMemory.ReadProcess = aProcesses[0];
+                     oMemory.Open();
+                     float boolv = 1;
+                     long FOV_Address = oMemory.BaseAddressD() + Addr.ToDec(offset);
+                     int bytesWritten;
+                     byte[] bValue_To_Write = BitConverter.GetBytes(boolv);
+                     oMemory.Write((IntPtr)FOV_Address, bValue_To_Write, out bytesWritten);
+                     oMemory.CloseHandle();
+                 }
+             }
+         }*/
+
+
     }
 
     class MemoryAPI
