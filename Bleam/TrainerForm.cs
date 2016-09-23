@@ -56,11 +56,58 @@ namespace Bleam
 			}
 		}
 
-        private void Wide_Screen_Enabler(object sender, EventArgs e)
+        private void Set_Widescreen_Fix_Click(object sender, EventArgs e)
         {
-           //HACKS
-          // ThisWillError:^) SEARCH FOR THE FUCKING SHITTY RESOLUTION READ IT THO SO YA DON"T NEED TOO."
+            //HACKS
+            // ThisWillError:^) SEARCH FOR THE FUCKING SHITTY RESOLUTION READ IT THO SO YA DON"T NEED TOO."
+            //THIS IS MAX FPS SHIT 1000000/120=8333
+            Process[] aProcesses = Process.GetProcessesByName("halo5forge");
+            if (aProcesses.Length != 0)
+            {
+                oMemory.ReadProcess = aProcesses[0];
+                oMemory.Open();
+
+                string[] Widescreen_Addresses = new string[] { "6188AC", "7DEDF4", "82A5B8", "82B964", "8F0890", "8F09C4", "A389F8", "A38BF8", "A38DF8", "A38FF8",
+                    "AC80A4", "AC80B0", "B5AEFC", "111FEE0", "1453318", "1481128", "15C1898", "15C7330", "15DDAFC", "15F2E0C",
+                    "170348C", "1B6673C", "1DA5EB8", "1E2D7B4", "1E4303C", "1E4FA7C", "1E79DBC", "1E82CCC", "1E92FB8", "1F2BD68",
+                    "21B2228", "21C9754", "22093AC", "2226FA0", "2227110", "2227268", "222754C", "23BF720", "23BF72C", "261B730",
+                    "26AB830", "2795F90", "2796E5C", "279CF30", "2A24A60", "2C59974", "2CEE5F8", "2DCC734", "2DCC7F8", "2E80A34",
+                    "2EBA988", "3002B44", "307A4D4", "391D070", "399725C", "3999AA4", "3999AAC", "3DC779C", "3DC7804", "3DC78A4",
+                    "3DC790C", "464D050", "464D06C", "4E6A884", "4E96E80", "4E97F60", "4E97F6C", "4E97F84", "4E97F98", "4E98144",
+                    "4ECCCB0", "4EF50E0", "58DCFA8", "5AB2798", "63A1F00", "643C684", "643C744", "64B2C08", "64D38A8", "6509D9C" };
+
+
+                List<long> WS_Long_Addies = new List<long>();
+
+                foreach (string dong in Widescreen_Addresses)
+                {
+                    long convert;
+                    if (long.TryParse(dong, out convert))
+                    {
+                        Console.WriteLine(convert);
+                        WS_Long_Addies.Add(oMemory.BaseAddressD() + Addr.ToDec(System.Convert.ToString(convert)));
+                    }
+                }
+
+                long[] Widescreen_Addies = WS_Long_Addies.ToArray();
+
+                //Console.WriteLine(Widescreen_Addies);
+
+             //   long FOV_Address = oMemory.BaseAddressD() + Addr.ToDec("58ECF90");
+
+
+
+                decimal WS_Height = Math.Round(decimal.Parse(Convert.ToString(Widescreen_Height.Value)));
+                int int_ws = (int)WS_Height;
+
+                int bytesWritten;
+                byte[] bValue_To_Write = BitConverter.GetBytes(int_ws);
+                //oMemory.Write((IntPtr)Widescreen_Addies, bValue_To_Write, out bytesWritten);
+
+                oMemory.CloseHandle();
+            }
         }
+
         private void FOV_CHANGER_Click(object sender, EventArgs e)
 		{
             //FOV SHIT
@@ -182,6 +229,37 @@ namespace Bleam
         {
 
         }
+        
+        private void Set_Forge_Map_Click(object sender, EventArgs e)
+        {
+            Process[] aProcesses = Process.GetProcessesByName("halo5forge");
+            if (aProcesses.Length != 0)
+            {
+                oMemory.ReadProcess = aProcesses[0];
+                oMemory.Open();
+                int bytesWritten;
+
+                string forgemap = System.Convert.ToString(this.forge_map_box_value.Text);
+                long FOV_Address = oMemory.BaseAddressD() + Addr.ToDec("3A25DA0");
+                byte[] forgemapname = Encoding.ASCII.GetBytes(forgemap);
+                byte[] bValue_To_Write = forgemapname;
+                
+                oMemory.Write((IntPtr)FOV_Address, bValue_To_Write, out bytesWritten);
+
+
+                oMemory.CloseHandle();
+            }
+        }
+
+        private void textBox2_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+
+
+
+
 
 
         //Fuck off Functions

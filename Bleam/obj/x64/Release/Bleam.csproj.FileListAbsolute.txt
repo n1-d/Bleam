@@ -1,0 +1,8 @@
+Z:\Projects\Bleam\Bleam\bin\x64\Release\Bleam.exe
+Z:\Projects\Bleam\Bleam\bin\x64\Release\Bleam.pdb
+Z:\Projects\Bleam\Bleam\obj\x64\Release\Bleam.hForm.resources
+Z:\Projects\Bleam\Bleam\obj\x64\Release\Bleam.Properties.Resources.resources
+Z:\Projects\Bleam\Bleam\obj\x64\Release\Bleam.csproj.GenerateResource.Cache
+Z:\Projects\Bleam\Bleam\obj\x64\Release\Bleam.exe
+Z:\Projects\Bleam\Bleam\obj\x64\Release\Bleam.pdb
+Z:\Projects\Bleam\Bleam\obj\x64\Release\Bleam.csprojResolveAssemblyReference.cache

@@ -1,0 +1,17 @@
+c:\users\john\documents\visual studio 2010\Projects\CET_Tutorial\CET_Tutorial\bin\Debug\CET_Tutorial.exe
+c:\users\john\documents\visual studio 2010\Projects\CET_Tutorial\CET_Tutorial\bin\Debug\CET_Tutorial.pdb
+c:\users\john\documents\visual studio 2010\Projects\CET_Tutorial\CET_Tutorial\obj\x86\Debug\ResolveAssemblyReference.cache
+c:\users\john\documents\visual studio 2010\Projects\CET_Tutorial\CET_Tutorial\obj\x86\Debug\CET_Tutorial.hForm.resources
+c:\users\john\documents\visual studio 2010\Projects\CET_Tutorial\CET_Tutorial\obj\x86\Debug\CET_Tutorial.Properties.Resources.resources
+c:\users\john\documents\visual studio 2010\Projects\CET_Tutorial\CET_Tutorial\obj\x86\Debug\GenerateResource.read.1.tlog
+c:\users\john\documents\visual studio 2010\Projects\CET_Tutorial\CET_Tutorial\obj\x86\Debug\GenerateResource.write.1.tlog
+c:\users\john\documents\visual studio 2010\Projects\CET_Tutorial\CET_Tutorial\obj\x86\Debug\CET_Tutorial.exe
+c:\users\john\documents\visual studio 2010\Projects\CET_Tutorial\CET_Tutorial\obj\x86\Debug\CET_Tutorial.pdb
+Z:\Projects\Bleam\CET_Tutorial\obj\x86\Debug\CET_Tutorial.exe
+Z:\Projects\Bleam\CET_Tutorial\obj\x86\Debug\CET_Tutorial.pdb
+Z:\Projects\Bleam\CET_Tutorial\bin\Debug\CET_Tutorial.exe
+Z:\Projects\Bleam\CET_Tutorial\bin\Debug\CET_Tutorial.pdb
+Z:\Projects\Bleam\CET_Tutorial\obj\x86\Debug\CET_Tutorial.csprojResolveAssemblyReference.cache
+Z:\Projects\Bleam\CET_Tutorial\obj\x86\Debug\CET_Tutorial.hForm.resources
+Z:\Projects\Bleam\CET_Tutorial\obj\x86\Debug\CET_Tutorial.Properties.Resources.resources
+Z:\Projects\Bleam\CET_Tutorial\obj\x86\Debug\CET_Tutorial.csproj.GenerateResource.Cache

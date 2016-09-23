@@ -43,6 +43,11 @@
             this.NoGore = new System.Windows.Forms.CheckBox();
             this.Effects_Distortion = new System.Windows.Forms.CheckBox();
             this.Misc = new System.Windows.Forms.TabPage();
+            this.Widescreen_Height = new System.Windows.Forms.NumericUpDown();
+            this.label3 = new System.Windows.Forms.Label();
+            this.Set_Widescreen_Fix = new System.Windows.Forms.Button();
+            this.label2 = new System.Windows.Forms.Label();
+            this.Set_Forge_Map = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.forge_map_box_value = new System.Windows.Forms.TextBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
@@ -59,16 +64,18 @@
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.Credit = new System.Windows.Forms.TabPage();
             this.Credits = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
+            this.Widescreen_Width = new System.Windows.Forms.NumericUpDown();
             ((System.ComponentModel.ISupportInitialize)(this.FoVNumber)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.MaxFPSValue)).BeginInit();
             this.tabControl1.SuspendLayout();
             this.Graphical.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.Misc.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.Widescreen_Height)).BeginInit();
             this.groupBox2.SuspendLayout();
             this.DebugShit.SuspendLayout();
             this.Credit.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.Widescreen_Width)).BeginInit();
             this.SuspendLayout();
             // 
             // Max_FPS
@@ -303,7 +310,12 @@
             // Misc
             // 
             this.Misc.BackColor = System.Drawing.Color.Transparent;
-            this.Misc.Controls.Add(this.button1);
+            this.Misc.Controls.Add(this.Widescreen_Width);
+            this.Misc.Controls.Add(this.Widescreen_Height);
+            this.Misc.Controls.Add(this.label3);
+            this.Misc.Controls.Add(this.Set_Widescreen_Fix);
+            this.Misc.Controls.Add(this.label2);
+            this.Misc.Controls.Add(this.Set_Forge_Map);
             this.Misc.Controls.Add(this.label1);
             this.Misc.Controls.Add(this.forge_map_box_value);
             this.Misc.Controls.Add(this.groupBox2);
@@ -314,6 +326,61 @@
             this.Misc.TabIndex = 1;
             this.Misc.Text = "Miscellaneous";
             this.Misc.Click += new System.EventHandler(this.tabPage2_Click);
+            // 
+            // Widescreen_Height
+            // 
+            this.Widescreen_Height.Location = new System.Drawing.Point(111, 184);
+            this.Widescreen_Height.Maximum = new decimal(new int[] {
+            9999,
+            0,
+            0,
+            0});
+            this.Widescreen_Height.Name = "Widescreen_Height";
+            this.Widescreen_Height.Size = new System.Drawing.Size(74, 20);
+            this.Widescreen_Height.TabIndex = 25;
+            this.Widescreen_Height.Value = new decimal(new int[] {
+            2560,
+            0,
+            0,
+            0});
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(234, 187);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(95, 13);
+            this.label3.TabIndex = 24;
+            this.label3.Text = "Widescreen Width";
+            // 
+            // Set_Widescreen_Fix
+            // 
+            this.Set_Widescreen_Fix.Location = new System.Drawing.Point(12, 210);
+            this.Set_Widescreen_Fix.Name = "Set_Widescreen_Fix";
+            this.Set_Widescreen_Fix.Size = new System.Drawing.Size(394, 23);
+            this.Set_Widescreen_Fix.TabIndex = 22;
+            this.Set_Widescreen_Fix.Text = "Set Widescreen Fix";
+            this.Set_Widescreen_Fix.UseVisualStyleBackColor = true;
+            this.Set_Widescreen_Fix.Click += new System.EventHandler(this.Set_Widescreen_Fix_Click);
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(11, 187);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(98, 13);
+            this.label2.TabIndex = 21;
+            this.label2.Text = "Widescreen Height";
+            // 
+            // Set_Forge_Map
+            // 
+            this.Set_Forge_Map.Location = new System.Drawing.Point(12, 155);
+            this.Set_Forge_Map.Name = "Set_Forge_Map";
+            this.Set_Forge_Map.Size = new System.Drawing.Size(394, 23);
+            this.Set_Forge_Map.TabIndex = 19;
+            this.Set_Forge_Map.Text = "Set Forge Map";
+            this.Set_Forge_Map.UseVisualStyleBackColor = true;
+            this.Set_Forge_Map.Click += new System.EventHandler(this.Set_Forge_Map_Click);
             // 
             // label1
             // 
@@ -330,6 +397,7 @@
             this.forge_map_box_value.Name = "forge_map_box_value";
             this.forge_map_box_value.Size = new System.Drawing.Size(295, 20);
             this.forge_map_box_value.TabIndex = 17;
+            this.forge_map_box_value.Text = "levels\\multi\\fo02_glacier\\fo02_glacier";
             // 
             // groupBox2
             // 
@@ -555,14 +623,22 @@
             this.Credits.Text = "Credits goto Xbox7887, Wunkolo, no1dead, 404Spartan, Lord Zedd\r\nGamecheat 13, Sho" +
     "ckfire, Personality, Bivi for all the addresses,\r\nand hard work. ";
             // 
-            // button1
+            // Widescreen_Width
             // 
-            this.button1.Location = new System.Drawing.Point(12, 155);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(394, 23);
-            this.button1.TabIndex = 19;
-            this.button1.Text = "Set Forge Map";
-            this.button1.UseVisualStyleBackColor = true;
+            this.Widescreen_Width.Location = new System.Drawing.Point(331, 184);
+            this.Widescreen_Width.Maximum = new decimal(new int[] {
+            9999,
+            0,
+            0,
+            0});
+            this.Widescreen_Width.Name = "Widescreen_Width";
+            this.Widescreen_Width.Size = new System.Drawing.Size(74, 20);
+            this.Widescreen_Width.TabIndex = 26;
+            this.Widescreen_Width.Value = new decimal(new int[] {
+            1080,
+            0,
+            0,
+            0});
             // 
             // hForm
             // 
@@ -581,11 +657,13 @@
             this.groupBox1.PerformLayout();
             this.Misc.ResumeLayout(false);
             this.Misc.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.Widescreen_Height)).EndInit();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
             this.DebugShit.ResumeLayout(false);
             this.Credit.ResumeLayout(false);
             this.Credit.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.Widescreen_Width)).EndInit();
             this.ResumeLayout(false);
 
 		}
@@ -623,7 +701,12 @@
         private System.Windows.Forms.GroupBox groupBox3;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox forge_map_box_value;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button Set_Forge_Map;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Button Set_Widescreen_Fix;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.NumericUpDown Widescreen_Height;
+        private System.Windows.Forms.NumericUpDown Widescreen_Width;
     }
 }
 
