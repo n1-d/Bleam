@@ -1,7 +1,0 @@
-Z:\Projects\Bleam\CET_Tutorial\bin\Debug\CET_Tutorial.exe
-Z:\Projects\Bleam\CET_Tutorial\bin\Debug\CET_Tutorial.pdb
-Z:\Projects\Bleam\CET_Tutorial\obj\Debug\CET_Tutorial.hForm.resources
-Z:\Projects\Bleam\CET_Tutorial\obj\Debug\CET_Tutorial.Properties.Resources.resources
-Z:\Projects\Bleam\CET_Tutorial\obj\Debug\CET_Tutorial.csproj.GenerateResource.Cache
-Z:\Projects\Bleam\CET_Tutorial\obj\Debug\CET_Tutorial.exe
-Z:\Projects\Bleam\CET_Tutorial\obj\Debug\CET_Tutorial.pdb
