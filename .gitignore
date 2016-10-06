@@ -243,3 +243,7 @@
  -
  -# FAKE - F# Make
  -.fake/ 
+/Bleam/bin/x64/Debug
+/Bleam/bin/x64/Release
+/Bleam/obj/x64
+/.vs/Bleam/v14
