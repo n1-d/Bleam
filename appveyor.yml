@@ -1,0 +1,28 @@
+version: 1.0.1.{build}
+
+# clone directory
+clone_folder: c:\projects\Bleam
+
+configuration: Release
+platform: x64
+
+assembly_info:
+  patch: true
+  file: '**\AssemblyInfo.*'
+  assembly_version: '{version}'
+  assembly_file_version: '{version}'
+  assembly_informational_version: '{version}'
+
+build:
+  project: Bleam.sln
+  verbosity: normal
+
+# scripts to run after build
+before_build:
+  - nuget restore
+after_build:
+  - cd c:\projects\Bleam
+  - copy c:\projects\Bleam\Bleam\bin\x64\Release\Bleam.exe c:\projects\Bleam\Bleam.exe
+artifacts:
+  - path: Bleam.exe
+    name: Bleam.exe
