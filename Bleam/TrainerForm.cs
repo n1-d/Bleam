@@ -362,7 +362,7 @@ namespace Bleam
                 oMemory.Open();
 
                 float suckondeezfov = System.Convert.ToInt32(this.FoVNumber.Value);
-                long FOV_Address = oMemory.BaseAddressD() + Addr.ToDec("58ECF90");
+                long FOV_Address = oMemory.BaseAddressD() + Addr.ToDec("5934A90");
 
                 int bytesWritten;
                 byte[] bValue_To_Write = BitConverter.GetBytes(suckondeezfov);
@@ -527,11 +527,11 @@ namespace Bleam
                 int bytesWritten;
 
                 string forgemap = System.Convert.ToString(this.forge_map_box_value.Text);
-                long FOV_Address = oMemory.BaseAddressD() + Addr.ToDec("3A25DA0");
+                long forge_address = oMemory.BaseAddressD() + Addr.ToDec("3A01840");
                 byte[] forgemapname = Encoding.ASCII.GetBytes(forgemap);
                 byte[] bValue_To_Write = forgemapname;
                 
-                oMemory.Write((IntPtr)FOV_Address, bValue_To_Write, out bytesWritten);
+                oMemory.Write((IntPtr)forge_address, bValue_To_Write, out bytesWritten);
 
 
                 oMemory.CloseHandle();

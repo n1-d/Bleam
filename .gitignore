@@ -247,3 +247,4 @@
 /Bleam/bin/x64/Release
 /Bleam/obj/x64
 /.vs/Bleam/v14
+*.exe
