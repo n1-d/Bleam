@@ -34,9 +34,9 @@ namespace Bleam
 				oMemory.ReadProcess = aProcesses[0];
 				oMemory.Open();
 
-                long FPS_Address_1 = oMemory.BaseAddressD() + Addr.ToDec("34B8C50");
-                long FPS_Address_2 = oMemory.BaseAddressD() + Addr.ToDec("34B8C60");
-                long FPS_Address_3 = oMemory.BaseAddressD() + Addr.ToDec("34B8C70");
+                long FPS_Address_1 = oMemory.BaseAddressD() + Addr.ToDec("349E970");
+                long FPS_Address_2 = oMemory.BaseAddressD() + Addr.ToDec("349E980");
+                long FPS_Address_3 = oMemory.BaseAddressD() + Addr.ToDec("34B8C90");
 
                 string maxfpsmaybe = Convert.ToString(1000000 / MaxFPSValue.Value);
 
