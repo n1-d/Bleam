@@ -52,21 +52,22 @@
             this.NoGore = new System.Windows.Forms.CheckBox();
             this.Effects_Distortion = new System.Windows.Forms.CheckBox();
             this.tabControl1 = new System.Windows.Forms.TabControl();
-            this.Mouse_TAB = new System.Windows.Forms.TabPage();
-            this.FoVNumber = new System.Windows.Forms.NumericUpDown();
-            this.MaxFPSValue = new System.Windows.Forms.NumericUpDown();
-            this.hButton_Step3 = new System.Windows.Forms.Button();
-            this.Max_FPS = new System.Windows.Forms.Button();
-            this.forge_map_box_value = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.Set_Forge_Map = new System.Windows.Forms.Button();
-            this.label2 = new System.Windows.Forms.Label();
-            this.Set_Widescreen_Fix = new System.Windows.Forms.Button();
-            this.label3 = new System.Windows.Forms.Label();
-            this.Widescreen_Height = new System.Windows.Forms.NumericUpDown();
-            this.Widescreen_Width = new System.Windows.Forms.NumericUpDown();
-            this.killvoldisable = new System.Windows.Forms.CheckBox();
             this.Useable = new System.Windows.Forms.TabPage();
+            this.killvoldisable = new System.Windows.Forms.CheckBox();
+            this.Widescreen_Width = new System.Windows.Forms.NumericUpDown();
+            this.Widescreen_Height = new System.Windows.Forms.NumericUpDown();
+            this.label3 = new System.Windows.Forms.Label();
+            this.Set_Widescreen_Fix = new System.Windows.Forms.Button();
+            this.label2 = new System.Windows.Forms.Label();
+            this.Set_Forge_Map = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
+            this.forge_map_box_value = new System.Windows.Forms.TextBox();
+            this.Max_FPS = new System.Windows.Forms.Button();
+            this.hButton_Step3 = new System.Windows.Forms.Button();
+            this.MaxFPSValue = new System.Windows.Forms.NumericUpDown();
+            this.FoVNumber = new System.Windows.Forms.NumericUpDown();
+            this.Mouse_TAB = new System.Windows.Forms.TabPage();
+            this.Auto_FOV = new System.Windows.Forms.CheckBox();
             this.Credit.SuspendLayout();
             this.DebugShit.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -75,11 +76,11 @@
             this.Graphical.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.tabControl1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.FoVNumber)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.MaxFPSValue)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Widescreen_Height)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Widescreen_Width)).BeginInit();
             this.Useable.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.Widescreen_Width)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Widescreen_Height)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.MaxFPSValue)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.FoVNumber)).BeginInit();
             this.SuspendLayout();
             // 
             // Credit
@@ -484,158 +485,29 @@
             this.tabControl1.TabIndex = 11;
             this.tabControl1.SelectedIndexChanged += new System.EventHandler(this.tabControl1_SelectedIndexChanged);
             // 
-            // Mouse_TAB
+            // Useable
             // 
-            this.Mouse_TAB.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.Mouse_TAB.Location = new System.Drawing.Point(4, 22);
-            this.Mouse_TAB.Name = "Mouse_TAB";
-            this.Mouse_TAB.Padding = new System.Windows.Forms.Padding(3);
-            this.Mouse_TAB.Size = new System.Drawing.Size(417, 264);
-            this.Mouse_TAB.TabIndex = 5;
-            this.Mouse_TAB.Text = "Mouse";
-            // 
-            // FoVNumber
-            // 
-            this.FoVNumber.Location = new System.Drawing.Point(287, 38);
-            this.FoVNumber.Maximum = new decimal(new int[] {
-            999,
-            0,
-            0,
-            0});
-            this.FoVNumber.Name = "FoVNumber";
-            this.FoVNumber.Size = new System.Drawing.Size(120, 20);
-            this.FoVNumber.TabIndex = 12;
-            this.FoVNumber.Value = new decimal(new int[] {
-            78,
-            0,
-            0,
-            0});
-            // 
-            // MaxFPSValue
-            // 
-            this.MaxFPSValue.Location = new System.Drawing.Point(287, 10);
-            this.MaxFPSValue.Maximum = new decimal(new int[] {
-            144,
-            0,
-            0,
-            0});
-            this.MaxFPSValue.Name = "MaxFPSValue";
-            this.MaxFPSValue.Size = new System.Drawing.Size(120, 20);
-            this.MaxFPSValue.TabIndex = 13;
-            this.MaxFPSValue.Value = new decimal(new int[] {
-            60,
-            0,
-            0,
-            0});
-            // 
-            // hButton_Step3
-            // 
-            this.hButton_Step3.Location = new System.Drawing.Point(9, 36);
-            this.hButton_Step3.Name = "hButton_Step3";
-            this.hButton_Step3.Size = new System.Drawing.Size(272, 23);
-            this.hButton_Step3.TabIndex = 11;
-            this.hButton_Step3.Text = "Change FOV";
-            this.hButton_Step3.UseVisualStyleBackColor = true;
-            this.hButton_Step3.Click += new System.EventHandler(this.FOV_CHANGER_Click);
-            // 
-            // Max_FPS
-            // 
-            this.Max_FPS.Location = new System.Drawing.Point(9, 7);
-            this.Max_FPS.Name = "Max_FPS";
-            this.Max_FPS.Size = new System.Drawing.Size(272, 23);
-            this.Max_FPS.TabIndex = 10;
-            this.Max_FPS.Text = "Change Max FPS";
-            this.Max_FPS.UseVisualStyleBackColor = true;
-            this.Max_FPS.Click += new System.EventHandler(this.Max_FPS_Click);
-            // 
-            // forge_map_box_value
-            // 
-            this.forge_map_box_value.Location = new System.Drawing.Point(112, 67);
-            this.forge_map_box_value.Name = "forge_map_box_value";
-            this.forge_map_box_value.Size = new System.Drawing.Size(295, 20);
-            this.forge_map_box_value.TabIndex = 27;
-            this.forge_map_box_value.Text = "levels\\multi\\fo02_glacier\\fo02_glacier";
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(9, 70);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(96, 13);
-            this.label1.TabIndex = 28;
-            this.label1.Text = "Forge Map Tutorial";
-            // 
-            // Set_Forge_Map
-            // 
-            this.Set_Forge_Map.Location = new System.Drawing.Point(9, 94);
-            this.Set_Forge_Map.Name = "Set_Forge_Map";
-            this.Set_Forge_Map.Size = new System.Drawing.Size(398, 21);
-            this.Set_Forge_Map.TabIndex = 29;
-            this.Set_Forge_Map.Text = "Set Forge Map";
-            this.Set_Forge_Map.UseVisualStyleBackColor = true;
-            this.Set_Forge_Map.Click += new System.EventHandler(this.Set_Forge_Map_Click);
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(11, 126);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(98, 13);
-            this.label2.TabIndex = 30;
-            this.label2.Text = "Widescreen Height";
-            // 
-            // Set_Widescreen_Fix
-            // 
-            this.Set_Widescreen_Fix.Location = new System.Drawing.Point(9, 149);
-            this.Set_Widescreen_Fix.Name = "Set_Widescreen_Fix";
-            this.Set_Widescreen_Fix.Size = new System.Drawing.Size(398, 21);
-            this.Set_Widescreen_Fix.TabIndex = 31;
-            this.Set_Widescreen_Fix.Text = "Set Widescreen Fix";
-            this.Set_Widescreen_Fix.UseVisualStyleBackColor = true;
-            this.Set_Widescreen_Fix.Click += new System.EventHandler(this.Set_Widescreen_Fix_Click);
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(236, 126);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(95, 13);
-            this.label3.TabIndex = 32;
-            this.label3.Text = "Widescreen Width";
-            // 
-            // Widescreen_Height
-            // 
-            this.Widescreen_Height.Location = new System.Drawing.Point(113, 123);
-            this.Widescreen_Height.Maximum = new decimal(new int[] {
-            9999,
-            0,
-            0,
-            0});
-            this.Widescreen_Height.Name = "Widescreen_Height";
-            this.Widescreen_Height.Size = new System.Drawing.Size(74, 20);
-            this.Widescreen_Height.TabIndex = 33;
-            this.Widescreen_Height.Value = new decimal(new int[] {
-            2560,
-            0,
-            0,
-            0});
-            // 
-            // Widescreen_Width
-            // 
-            this.Widescreen_Width.Location = new System.Drawing.Point(333, 123);
-            this.Widescreen_Width.Maximum = new decimal(new int[] {
-            9999,
-            0,
-            0,
-            0});
-            this.Widescreen_Width.Name = "Widescreen_Width";
-            this.Widescreen_Width.Size = new System.Drawing.Size(74, 20);
-            this.Widescreen_Width.TabIndex = 34;
-            this.Widescreen_Width.Value = new decimal(new int[] {
-            1080,
-            0,
-            0,
-            0});
+            this.Useable.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.Useable.Controls.Add(this.Auto_FOV);
+            this.Useable.Controls.Add(this.killvoldisable);
+            this.Useable.Controls.Add(this.Widescreen_Width);
+            this.Useable.Controls.Add(this.Widescreen_Height);
+            this.Useable.Controls.Add(this.label3);
+            this.Useable.Controls.Add(this.Set_Widescreen_Fix);
+            this.Useable.Controls.Add(this.label2);
+            this.Useable.Controls.Add(this.Set_Forge_Map);
+            this.Useable.Controls.Add(this.label1);
+            this.Useable.Controls.Add(this.forge_map_box_value);
+            this.Useable.Controls.Add(this.Max_FPS);
+            this.Useable.Controls.Add(this.hButton_Step3);
+            this.Useable.Controls.Add(this.MaxFPSValue);
+            this.Useable.Controls.Add(this.FoVNumber);
+            this.Useable.Location = new System.Drawing.Point(4, 22);
+            this.Useable.Name = "Useable";
+            this.Useable.Padding = new System.Windows.Forms.Padding(3);
+            this.Useable.Size = new System.Drawing.Size(417, 264);
+            this.Useable.TabIndex = 4;
+            this.Useable.Text = "Usable";
             // 
             // killvoldisable
             // 
@@ -656,28 +528,169 @@
             this.killvoldisable.UseVisualStyleBackColor = false;
             this.killvoldisable.CheckedChanged += new System.EventHandler(this.killvolcheck);
             // 
-            // Useable
+            // Widescreen_Width
             // 
-            this.Useable.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.Useable.Controls.Add(this.killvoldisable);
-            this.Useable.Controls.Add(this.Widescreen_Width);
-            this.Useable.Controls.Add(this.Widescreen_Height);
-            this.Useable.Controls.Add(this.label3);
-            this.Useable.Controls.Add(this.Set_Widescreen_Fix);
-            this.Useable.Controls.Add(this.label2);
-            this.Useable.Controls.Add(this.Set_Forge_Map);
-            this.Useable.Controls.Add(this.label1);
-            this.Useable.Controls.Add(this.forge_map_box_value);
-            this.Useable.Controls.Add(this.Max_FPS);
-            this.Useable.Controls.Add(this.hButton_Step3);
-            this.Useable.Controls.Add(this.MaxFPSValue);
-            this.Useable.Controls.Add(this.FoVNumber);
-            this.Useable.Location = new System.Drawing.Point(4, 22);
-            this.Useable.Name = "Useable";
-            this.Useable.Padding = new System.Windows.Forms.Padding(3);
-            this.Useable.Size = new System.Drawing.Size(417, 264);
-            this.Useable.TabIndex = 4;
-            this.Useable.Text = "Usable";
+            this.Widescreen_Width.Location = new System.Drawing.Point(333, 123);
+            this.Widescreen_Width.Maximum = new decimal(new int[] {
+            9999,
+            0,
+            0,
+            0});
+            this.Widescreen_Width.Name = "Widescreen_Width";
+            this.Widescreen_Width.Size = new System.Drawing.Size(74, 20);
+            this.Widescreen_Width.TabIndex = 34;
+            this.Widescreen_Width.Value = new decimal(new int[] {
+            1080,
+            0,
+            0,
+            0});
+            // 
+            // Widescreen_Height
+            // 
+            this.Widescreen_Height.Location = new System.Drawing.Point(113, 123);
+            this.Widescreen_Height.Maximum = new decimal(new int[] {
+            9999,
+            0,
+            0,
+            0});
+            this.Widescreen_Height.Name = "Widescreen_Height";
+            this.Widescreen_Height.Size = new System.Drawing.Size(74, 20);
+            this.Widescreen_Height.TabIndex = 33;
+            this.Widescreen_Height.Value = new decimal(new int[] {
+            2560,
+            0,
+            0,
+            0});
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(236, 126);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(95, 13);
+            this.label3.TabIndex = 32;
+            this.label3.Text = "Widescreen Width";
+            // 
+            // Set_Widescreen_Fix
+            // 
+            this.Set_Widescreen_Fix.Location = new System.Drawing.Point(9, 149);
+            this.Set_Widescreen_Fix.Name = "Set_Widescreen_Fix";
+            this.Set_Widescreen_Fix.Size = new System.Drawing.Size(398, 21);
+            this.Set_Widescreen_Fix.TabIndex = 31;
+            this.Set_Widescreen_Fix.Text = "Set Widescreen Fix";
+            this.Set_Widescreen_Fix.UseVisualStyleBackColor = true;
+            this.Set_Widescreen_Fix.Click += new System.EventHandler(this.Set_Widescreen_Fix_Click);
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(11, 126);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(98, 13);
+            this.label2.TabIndex = 30;
+            this.label2.Text = "Widescreen Height";
+            // 
+            // Set_Forge_Map
+            // 
+            this.Set_Forge_Map.Location = new System.Drawing.Point(9, 94);
+            this.Set_Forge_Map.Name = "Set_Forge_Map";
+            this.Set_Forge_Map.Size = new System.Drawing.Size(398, 21);
+            this.Set_Forge_Map.TabIndex = 29;
+            this.Set_Forge_Map.Text = "Set Forge Map";
+            this.Set_Forge_Map.UseVisualStyleBackColor = true;
+            this.Set_Forge_Map.Click += new System.EventHandler(this.Set_Forge_Map_Click);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(9, 70);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(96, 13);
+            this.label1.TabIndex = 28;
+            this.label1.Text = "Forge Map Tutorial";
+            // 
+            // forge_map_box_value
+            // 
+            this.forge_map_box_value.Location = new System.Drawing.Point(112, 67);
+            this.forge_map_box_value.Name = "forge_map_box_value";
+            this.forge_map_box_value.Size = new System.Drawing.Size(295, 20);
+            this.forge_map_box_value.TabIndex = 27;
+            this.forge_map_box_value.Text = "levels\\multi\\fo02_glacier\\fo02_glacier";
+            // 
+            // Max_FPS
+            // 
+            this.Max_FPS.Location = new System.Drawing.Point(9, 7);
+            this.Max_FPS.Name = "Max_FPS";
+            this.Max_FPS.Size = new System.Drawing.Size(272, 23);
+            this.Max_FPS.TabIndex = 10;
+            this.Max_FPS.Text = "Change Max FPS";
+            this.Max_FPS.UseVisualStyleBackColor = true;
+            this.Max_FPS.Click += new System.EventHandler(this.Max_FPS_Click);
+            // 
+            // hButton_Step3
+            // 
+            this.hButton_Step3.Location = new System.Drawing.Point(9, 36);
+            this.hButton_Step3.Name = "hButton_Step3";
+            this.hButton_Step3.Size = new System.Drawing.Size(272, 23);
+            this.hButton_Step3.TabIndex = 11;
+            this.hButton_Step3.Text = "Change FOV";
+            this.hButton_Step3.UseVisualStyleBackColor = true;
+            this.hButton_Step3.Click += new System.EventHandler(this.FOV_CHANGER_Click);
+            // 
+            // MaxFPSValue
+            // 
+            this.MaxFPSValue.Location = new System.Drawing.Point(287, 10);
+            this.MaxFPSValue.Maximum = new decimal(new int[] {
+            144,
+            0,
+            0,
+            0});
+            this.MaxFPSValue.Name = "MaxFPSValue";
+            this.MaxFPSValue.Size = new System.Drawing.Size(120, 20);
+            this.MaxFPSValue.TabIndex = 13;
+            this.MaxFPSValue.Value = new decimal(new int[] {
+            60,
+            0,
+            0,
+            0});
+            // 
+            // FoVNumber
+            // 
+            this.FoVNumber.Location = new System.Drawing.Point(287, 38);
+            this.FoVNumber.Maximum = new decimal(new int[] {
+            999,
+            0,
+            0,
+            0});
+            this.FoVNumber.Name = "FoVNumber";
+            this.FoVNumber.Size = new System.Drawing.Size(120, 20);
+            this.FoVNumber.TabIndex = 12;
+            this.FoVNumber.Value = new decimal(new int[] {
+            78,
+            0,
+            0,
+            0});
+            // 
+            // Mouse_TAB
+            // 
+            this.Mouse_TAB.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.Mouse_TAB.Location = new System.Drawing.Point(4, 22);
+            this.Mouse_TAB.Name = "Mouse_TAB";
+            this.Mouse_TAB.Padding = new System.Windows.Forms.Padding(3);
+            this.Mouse_TAB.Size = new System.Drawing.Size(417, 264);
+            this.Mouse_TAB.TabIndex = 5;
+            this.Mouse_TAB.Text = "Mouse";
+            // 
+            // Auto_FOV
+            // 
+            this.Auto_FOV.AutoSize = true;
+            this.Auto_FOV.CheckAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.Auto_FOV.Location = new System.Drawing.Point(331, 241);
+            this.Auto_FOV.Name = "Auto_FOV";
+            this.Auto_FOV.Size = new System.Drawing.Size(80, 17);
+            this.Auto_FOV.TabIndex = 36;
+            this.Auto_FOV.Text = "AUTO FOV";
+            this.Auto_FOV.UseVisualStyleBackColor = true;
             // 
             // hForm
             // 
@@ -700,12 +713,12 @@
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.tabControl1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.FoVNumber)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.MaxFPSValue)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Widescreen_Height)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Widescreen_Width)).EndInit();
             this.Useable.ResumeLayout(false);
             this.Useable.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.Widescreen_Width)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Widescreen_Height)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.MaxFPSValue)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.FoVNumber)).EndInit();
             this.ResumeLayout(false);
 
 		}
@@ -751,6 +764,7 @@
         private System.Windows.Forms.NumericUpDown MaxFPSValue;
         private System.Windows.Forms.NumericUpDown FoVNumber;
         private System.Windows.Forms.TabPage Mouse_TAB;
+        private System.Windows.Forms.CheckBox Auto_FOV;
     }
 }
 

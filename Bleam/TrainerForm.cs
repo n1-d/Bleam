@@ -14,18 +14,41 @@ namespace Bleam
 {
 	public partial class hForm : Form
 	{
-		Memory oMemory = new Memory();
+        bool fov_auto = System.Convert.ToBoolean(Auto_FOV_CheckedChanged());
+        Memory oMemory = new Memory();
+        static hForm Form;
         //Process[] aProcesses = Process.GetProcessesByName("halo5forge");
         //WorkingClassCuck WorkingCuck = new WorkingClassCuck(this);
 
-        
+        static void HaloIsRunning()
+        {
+            for (int i = 0; i < 0; i++)
+            {
+                Process[] pname = Process.GetProcessesByName("Halo5Forge");
+                if (pname.Length == 0)
+                {
+
+                }else if(Auto_FOV_CheckedChanged())
+                {
+                    var timer = new System.Threading.Timer(e => Form.FOV_Set(), null, TimeSpan.Zero, TimeSpan.FromMinutes(2));
+                }
+            }
+        }
         
         public hForm()
 		{
 			InitializeComponent();
 		}
 
-		private void Max_FPS_Click(object sender, EventArgs e)
+
+        public static bool Auto_FOV_CheckedChanged()
+        {
+            bool fov_auto = System.Convert.ToBoolean(Form.Auto_FOV.Checked);
+            return fov_auto;
+        }
+
+
+        private void Max_FPS_Click(object sender, EventArgs e)
 		{
             //THIS IS MAX FPS SHIT 1000000/120=8333
             Process[] aProcesses = Process.GetProcessesByName("halo5forge");
@@ -216,6 +239,27 @@ namespace Bleam
 
                 oMemory.CloseHandle();
             }   
+        }
+
+        public void FOV_Set()
+        {
+            Process[] aProcesses = Process.GetProcessesByName("halo5forge");
+            if (aProcesses.Length != 0)
+            {
+                oMemory.ReadProcess = aProcesses[0];
+                oMemory.Open();
+
+                float suckondeezfov = System.Convert.ToInt32(this.FoVNumber.Value);
+                long FOV_Address = oMemory.BaseAddressD() + Addr.ToDec("5934A90");
+
+                int bytesWritten;
+                byte[] bValue_To_Write = BitConverter.GetBytes(suckondeezfov);
+
+                oMemory.Write((IntPtr)FOV_Address, bValue_To_Write, out bytesWritten);
+
+
+                oMemory.CloseHandle();
+            }
         }
 
         private void Effects_Distortion_CheckedChanged(object sender, EventArgs e)
