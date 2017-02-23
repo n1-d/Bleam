@@ -28,6 +28,7 @@
 		/// </summary>
 		private void InitializeComponent()
 		{
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(hForm));
             this.Credit = new System.Windows.Forms.TabPage();
             this.Credits = new System.Windows.Forms.Label();
             this.DebugShit = new System.Windows.Forms.TabPage();
@@ -701,6 +702,7 @@
             this.ClientSize = new System.Drawing.Size(449, 314);
             this.Controls.Add(this.tabControl1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "hForm";
             this.Text = "Bleam";
             this.Credit.ResumeLayout(false);
