@@ -29,8 +29,6 @@
 		private void InitializeComponent()
 		{
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(hForm));
-            this.Credit = new System.Windows.Forms.TabPage();
-            this.Credits = new System.Windows.Forms.Label();
             this.DebugShit = new System.Windows.Forms.TabPage();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.checkBox15 = new System.Windows.Forms.CheckBox();
@@ -52,7 +50,8 @@
             this.Exposure_Use_Color_Source = new System.Windows.Forms.CheckBox();
             this.NoGore = new System.Windows.Forms.CheckBox();
             this.Effects_Distortion = new System.Windows.Forms.CheckBox();
-            this.tabControl1 = new System.Windows.Forms.TabControl();
+            this.Credit = new System.Windows.Forms.TabPage();
+            this.Credits = new System.Windows.Forms.Label();
             this.Useable = new System.Windows.Forms.TabPage();
             this.Auto_FOV = new System.Windows.Forms.CheckBox();
             this.killvoldisable = new System.Windows.Forms.CheckBox();
@@ -68,43 +67,21 @@
             this.hButton_Step3 = new System.Windows.Forms.Button();
             this.MaxFPSValue = new System.Windows.Forms.NumericUpDown();
             this.FoVNumber = new System.Windows.Forms.NumericUpDown();
-            this.Mouse_TAB = new System.Windows.Forms.TabPage();
-            this.Credit.SuspendLayout();
+            this.tabControl1 = new System.Windows.Forms.TabControl();
             this.DebugShit.SuspendLayout();
             this.groupBox3.SuspendLayout();
             this.Misc.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.Graphical.SuspendLayout();
             this.groupBox1.SuspendLayout();
-            this.tabControl1.SuspendLayout();
+            this.Credit.SuspendLayout();
             this.Useable.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Widescreen_Width)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Widescreen_Height)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.MaxFPSValue)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.FoVNumber)).BeginInit();
+            this.tabControl1.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // Credit
-            // 
-            this.Credit.BackColor = System.Drawing.Color.Transparent;
-            this.Credit.Controls.Add(this.Credits);
-            this.Credit.Location = new System.Drawing.Point(4, 22);
-            this.Credit.Name = "Credit";
-            this.Credit.Padding = new System.Windows.Forms.Padding(3);
-            this.Credit.Size = new System.Drawing.Size(417, 264);
-            this.Credit.TabIndex = 2;
-            this.Credit.Text = "Credits";
-            // 
-            // Credits
-            // 
-            this.Credits.AutoSize = true;
-            this.Credits.ForeColor = System.Drawing.Color.Black;
-            this.Credits.Location = new System.Drawing.Point(6, 108);
-            this.Credits.Name = "Credits";
-            this.Credits.Size = new System.Drawing.Size(327, 39);
-            this.Credits.TabIndex = 11;
-            this.Credits.Text = "Credits goto Xbox7887, Wunkolo, no1dead, 404Spartan, Lord Zedd\r\nGamecheat 13, Sho" +
-    "ckfire, Personality, Bivi for all the addresses,\r\nand hard work. ";
             // 
             // DebugShit
             // 
@@ -471,20 +448,27 @@
             this.Effects_Distortion.UseVisualStyleBackColor = false;
             this.Effects_Distortion.CheckedChanged += new System.EventHandler(this.Effects_Distortion_CheckedChanged);
             // 
-            // tabControl1
+            // Credit
             // 
-            this.tabControl1.Controls.Add(this.Useable);
-            this.tabControl1.Controls.Add(this.Mouse_TAB);
-            this.tabControl1.Controls.Add(this.Credit);
-            this.tabControl1.HotTrack = true;
-            this.tabControl1.ItemSize = new System.Drawing.Size(59, 18);
-            this.tabControl1.Location = new System.Drawing.Point(12, 12);
-            this.tabControl1.Name = "tabControl1";
-            this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.ShowToolTips = true;
-            this.tabControl1.Size = new System.Drawing.Size(425, 290);
-            this.tabControl1.TabIndex = 11;
-            this.tabControl1.SelectedIndexChanged += new System.EventHandler(this.tabControl1_SelectedIndexChanged);
+            this.Credit.BackColor = System.Drawing.Color.Transparent;
+            this.Credit.Controls.Add(this.Credits);
+            this.Credit.Location = new System.Drawing.Point(4, 22);
+            this.Credit.Name = "Credit";
+            this.Credit.Padding = new System.Windows.Forms.Padding(3);
+            this.Credit.Size = new System.Drawing.Size(417, 264);
+            this.Credit.TabIndex = 2;
+            this.Credit.Text = "Credits";
+            // 
+            // Credits
+            // 
+            this.Credits.AutoSize = true;
+            this.Credits.ForeColor = System.Drawing.Color.Black;
+            this.Credits.Location = new System.Drawing.Point(6, 108);
+            this.Credits.Name = "Credits";
+            this.Credits.Size = new System.Drawing.Size(327, 39);
+            this.Credits.TabIndex = 11;
+            this.Credits.Text = "Credits goto Xbox7887, Wunkolo, no1dead, 404Spartan, Lord Zedd\r\nGamecheat 13, Sho" +
+    "ckfire, Personality, Bivi for all the addresses,\r\nand hard work. ";
             // 
             // Useable
             // 
@@ -685,15 +669,19 @@
             0,
             0});
             // 
-            // Mouse_TAB
+            // tabControl1
             // 
-            this.Mouse_TAB.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.Mouse_TAB.Location = new System.Drawing.Point(4, 22);
-            this.Mouse_TAB.Name = "Mouse_TAB";
-            this.Mouse_TAB.Padding = new System.Windows.Forms.Padding(3);
-            this.Mouse_TAB.Size = new System.Drawing.Size(417, 264);
-            this.Mouse_TAB.TabIndex = 5;
-            this.Mouse_TAB.Text = "Mouse";
+            this.tabControl1.Controls.Add(this.Useable);
+            this.tabControl1.Controls.Add(this.Credit);
+            this.tabControl1.HotTrack = true;
+            this.tabControl1.ItemSize = new System.Drawing.Size(59, 18);
+            this.tabControl1.Location = new System.Drawing.Point(12, 12);
+            this.tabControl1.Name = "tabControl1";
+            this.tabControl1.SelectedIndex = 0;
+            this.tabControl1.ShowToolTips = true;
+            this.tabControl1.Size = new System.Drawing.Size(425, 290);
+            this.tabControl1.TabIndex = 11;
+            this.tabControl1.SelectedIndexChanged += new System.EventHandler(this.tabControl1_SelectedIndexChanged);
             // 
             // hForm
             // 
@@ -705,8 +693,6 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "hForm";
             this.Text = "Bleam";
-            this.Credit.ResumeLayout(false);
-            this.Credit.PerformLayout();
             this.DebugShit.ResumeLayout(false);
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
@@ -716,21 +702,20 @@
             this.Graphical.ResumeLayout(false);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            this.tabControl1.ResumeLayout(false);
+            this.Credit.ResumeLayout(false);
+            this.Credit.PerformLayout();
             this.Useable.ResumeLayout(false);
             this.Useable.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Widescreen_Width)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Widescreen_Height)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.MaxFPSValue)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.FoVNumber)).EndInit();
+            this.tabControl1.ResumeLayout(false);
             this.ResumeLayout(false);
 
 		}
 
         #endregion
-
-        private System.Windows.Forms.TabPage Credit;
-        private System.Windows.Forms.Label Credits;
         private System.Windows.Forms.TabPage DebugShit;
         private System.Windows.Forms.GroupBox groupBox3;
         private System.Windows.Forms.CheckBox checkBox15;
@@ -752,8 +737,11 @@
         private System.Windows.Forms.CheckBox Exposure_Use_Color_Source;
         private System.Windows.Forms.CheckBox NoGore;
         private System.Windows.Forms.CheckBox Effects_Distortion;
-        private System.Windows.Forms.TabControl tabControl1;
+        private System.Windows.Forms.TabPage Credit;
+        private System.Windows.Forms.Label Credits;
         private System.Windows.Forms.TabPage Useable;
+        private System.Windows.Forms.CheckBox Auto_FOV;
+        private System.Windows.Forms.CheckBox killvoldisable;
         private System.Windows.Forms.NumericUpDown Widescreen_Width;
         private System.Windows.Forms.NumericUpDown Widescreen_Height;
         private System.Windows.Forms.Label label3;
@@ -766,9 +754,7 @@
         private System.Windows.Forms.Button hButton_Step3;
         private System.Windows.Forms.NumericUpDown MaxFPSValue;
         private System.Windows.Forms.NumericUpDown FoVNumber;
-        private System.Windows.Forms.TabPage Mouse_TAB;
-        private System.Windows.Forms.CheckBox Auto_FOV;
-        private System.Windows.Forms.CheckBox killvoldisable;
+        private System.Windows.Forms.TabControl tabControl1;
     }
 }
 
