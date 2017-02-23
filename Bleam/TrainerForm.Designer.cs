@@ -53,6 +53,7 @@
             this.Effects_Distortion = new System.Windows.Forms.CheckBox();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.Useable = new System.Windows.Forms.TabPage();
+            this.Auto_FOV = new System.Windows.Forms.CheckBox();
             this.killvoldisable = new System.Windows.Forms.CheckBox();
             this.Widescreen_Width = new System.Windows.Forms.NumericUpDown();
             this.Widescreen_Height = new System.Windows.Forms.NumericUpDown();
@@ -67,7 +68,6 @@
             this.MaxFPSValue = new System.Windows.Forms.NumericUpDown();
             this.FoVNumber = new System.Windows.Forms.NumericUpDown();
             this.Mouse_TAB = new System.Windows.Forms.TabPage();
-            this.Auto_FOV = new System.Windows.Forms.CheckBox();
             this.Credit.SuspendLayout();
             this.DebugShit.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -509,6 +509,18 @@
             this.Useable.TabIndex = 4;
             this.Useable.Text = "Usable";
             // 
+            // Auto_FOV
+            // 
+            this.Auto_FOV.AutoSize = true;
+            this.Auto_FOV.CheckAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.Auto_FOV.Location = new System.Drawing.Point(331, 241);
+            this.Auto_FOV.Name = "Auto_FOV";
+            this.Auto_FOV.Size = new System.Drawing.Size(80, 17);
+            this.Auto_FOV.TabIndex = 36;
+            this.Auto_FOV.Text = "AUTO FOV";
+            this.Auto_FOV.UseVisualStyleBackColor = true;
+            this.Auto_FOV.Visible = false;
+            // 
             // killvoldisable
             // 
             this.killvoldisable.Appearance = System.Windows.Forms.Appearance.Button;
@@ -526,6 +538,7 @@
             this.killvoldisable.Text = "Kill Volumes Disable";
             this.killvoldisable.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.killvoldisable.UseVisualStyleBackColor = false;
+            this.killvoldisable.Visible = false;
             this.killvoldisable.CheckedChanged += new System.EventHandler(this.killvolcheck);
             // 
             // Widescreen_Width
@@ -681,17 +694,6 @@
             this.Mouse_TAB.TabIndex = 5;
             this.Mouse_TAB.Text = "Mouse";
             // 
-            // Auto_FOV
-            // 
-            this.Auto_FOV.AutoSize = true;
-            this.Auto_FOV.CheckAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.Auto_FOV.Location = new System.Drawing.Point(331, 241);
-            this.Auto_FOV.Name = "Auto_FOV";
-            this.Auto_FOV.Size = new System.Drawing.Size(80, 17);
-            this.Auto_FOV.TabIndex = 36;
-            this.Auto_FOV.Text = "AUTO FOV";
-            this.Auto_FOV.UseVisualStyleBackColor = true;
-            // 
             // hForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -750,7 +752,6 @@
         private System.Windows.Forms.CheckBox Effects_Distortion;
         private System.Windows.Forms.TabControl tabControl1;
         private System.Windows.Forms.TabPage Useable;
-        private System.Windows.Forms.CheckBox killvoldisable;
         private System.Windows.Forms.NumericUpDown Widescreen_Width;
         private System.Windows.Forms.NumericUpDown Widescreen_Height;
         private System.Windows.Forms.Label label3;
@@ -765,6 +766,7 @@
         private System.Windows.Forms.NumericUpDown FoVNumber;
         private System.Windows.Forms.TabPage Mouse_TAB;
         private System.Windows.Forms.CheckBox Auto_FOV;
+        private System.Windows.Forms.CheckBox killvoldisable;
     }
 }
 
