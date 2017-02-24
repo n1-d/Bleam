@@ -6,7 +6,7 @@
 		/// Required designer variable.
 		/// </summary>
 		private System.ComponentModel.IContainer components = null;
-        DolphinPorn DolphinPorn;
+        //DolphinPorn DolphinPorn;
         /// <summary>
         /// Clean up any resources being used.
         /// </summary>
@@ -68,6 +68,7 @@
             this.MaxFPSValue = new System.Windows.Forms.NumericUpDown();
             this.FoVNumber = new System.Windows.Forms.NumericUpDown();
             this.tabControl1 = new System.Windows.Forms.TabControl();
+            this.label4 = new System.Windows.Forms.Label();
             this.DebugShit.SuspendLayout();
             this.groupBox3.SuspendLayout();
             this.Misc.SuspendLayout();
@@ -449,6 +450,7 @@
             // Credit
             // 
             this.Credit.BackColor = System.Drawing.Color.Transparent;
+            this.Credit.Controls.Add(this.label4);
             this.Credit.Controls.Add(this.Credits);
             this.Credit.Location = new System.Drawing.Point(4, 22);
             this.Credit.Name = "Credit";
@@ -461,12 +463,13 @@
             // 
             this.Credits.AutoSize = true;
             this.Credits.ForeColor = System.Drawing.Color.Black;
-            this.Credits.Location = new System.Drawing.Point(6, 108);
+            this.Credits.Location = new System.Drawing.Point(6, 16);
             this.Credits.Name = "Credits";
-            this.Credits.Size = new System.Drawing.Size(327, 39);
+            this.Credits.Size = new System.Drawing.Size(107, 156);
             this.Credits.TabIndex = 11;
-            this.Credits.Text = "Credits goto Xbox7887, Wunkolo, no1dead, 404Spartan, Lord Zedd\r\nGamecheat 13, Sho" +
-    "ckfire, Personality, Bivi for all the addresses,\r\nand hard work. ";
+            this.Credits.Text = "- Xbox7887\r\n- Wunkolo\r\n- no1dead\r\n- 404Spartan\r\n- Lord Zedd\r\n- Gamecheat 13\r\n- Sh" +
+    "ockfire\r\n- Personality\r\n- Bivi \r\n- dany5639\r\nFor all the addresses,\r\nand hard wo" +
+    "rk. ";
             // 
             // Useable
             // 
@@ -675,11 +678,21 @@
             this.tabControl1.Size = new System.Drawing.Size(425, 290);
             this.tabControl1.TabIndex = 11;
             // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.ForeColor = System.Drawing.Color.Black;
+            this.label4.Location = new System.Drawing.Point(6, 3);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(42, 13);
+            this.label4.TabIndex = 12;
+            this.label4.Text = "Credits:";
+            // 
             // hForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.White;
+            this.BackColor = System.Drawing.Color.WhiteSmoke;
             this.ClientSize = new System.Drawing.Size(449, 314);
             this.Controls.Add(this.tabControl1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
@@ -749,6 +762,7 @@
         public System.Windows.Forms.NumericUpDown MaxFPSValue;
         public System.Windows.Forms.NumericUpDown FoVNumber;
         public System.Windows.Forms.TabControl tabControl1;
+        public System.Windows.Forms.Label label4;
     }
 }
 
