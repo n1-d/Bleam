@@ -1,17 +1,17 @@
 ﻿namespace Bleam
 {
-	partial class hForm
+	public partial class hForm
 	{
 		/// <summary>
 		/// Required designer variable.
 		/// </summary>
 		private System.ComponentModel.IContainer components = null;
-
-		/// <summary>
-		/// Clean up any resources being used.
-		/// </summary>
-		/// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
-		protected override void Dispose(bool disposing)
+        DolphinPorn DolphinPorn;
+        /// <summary>
+        /// Clean up any resources being used.
+        /// </summary>
+        /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        protected override void Dispose(bool disposing)
 		{
 			if (disposing && (components != null))
 			{
@@ -26,7 +26,7 @@
 		/// Required method for Designer support - do not modify
 		/// the contents of this method with the code editor.
 		/// </summary>
-		private void InitializeComponent()
+		public void InitializeComponent()
 		{
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(hForm));
             this.DebugShit = new System.Windows.Forms.TabPage();
@@ -154,7 +154,6 @@
             this.Misc.Size = new System.Drawing.Size(417, 264);
             this.Misc.TabIndex = 1;
             this.Misc.Text = "Miscellaneous";
-            this.Misc.Click += new System.EventHandler(this.tabPage2_Click);
             // 
             // groupBox2
             // 
@@ -446,7 +445,6 @@
             this.Effects_Distortion.Text = "Effects Distortion ";
             this.Effects_Distortion.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.Effects_Distortion.UseVisualStyleBackColor = false;
-            this.Effects_Distortion.CheckedChanged += new System.EventHandler(this.Effects_Distortion_CheckedChanged);
             // 
             // Credit
             // 
@@ -524,7 +522,6 @@
             this.killvoldisable.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.killvoldisable.UseVisualStyleBackColor = false;
             this.killvoldisable.Visible = false;
-            this.killvoldisable.CheckedChanged += new System.EventHandler(this.killvolcheck);
             // 
             // Widescreen_Width
             // 
@@ -577,7 +574,6 @@
             this.Set_Widescreen_Fix.TabIndex = 31;
             this.Set_Widescreen_Fix.Text = "Set Widescreen Fix";
             this.Set_Widescreen_Fix.UseVisualStyleBackColor = true;
-            this.Set_Widescreen_Fix.Click += new System.EventHandler(this.Set_Widescreen_Fix_Click);
             // 
             // label2
             // 
@@ -596,7 +592,6 @@
             this.Set_Forge_Map.TabIndex = 29;
             this.Set_Forge_Map.Text = "Set Forge Map";
             this.Set_Forge_Map.UseVisualStyleBackColor = true;
-            this.Set_Forge_Map.Click += new System.EventHandler(this.Set_Forge_Map_Click);
             // 
             // label1
             // 
@@ -623,7 +618,6 @@
             this.Max_FPS.TabIndex = 10;
             this.Max_FPS.Text = "Change Max FPS";
             this.Max_FPS.UseVisualStyleBackColor = true;
-            this.Max_FPS.Click += new System.EventHandler(this.Max_FPS_Click);
             // 
             // hButton_Step3
             // 
@@ -633,7 +627,6 @@
             this.hButton_Step3.TabIndex = 11;
             this.hButton_Step3.Text = "Change FOV";
             this.hButton_Step3.UseVisualStyleBackColor = true;
-            this.hButton_Step3.Click += new System.EventHandler(this.FOV_CHANGER_Click);
             // 
             // MaxFPSValue
             // 
@@ -681,18 +674,19 @@
             this.tabControl1.ShowToolTips = true;
             this.tabControl1.Size = new System.Drawing.Size(425, 290);
             this.tabControl1.TabIndex = 11;
-            this.tabControl1.SelectedIndexChanged += new System.EventHandler(this.tabControl1_SelectedIndexChanged);
             // 
             // hForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(449, 314);
             this.Controls.Add(this.tabControl1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "hForm";
             this.Text = "Bleam";
+            this.Load += new System.EventHandler(this.hForm_Load);
             this.DebugShit.ResumeLayout(false);
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
@@ -716,45 +710,45 @@
 		}
 
         #endregion
-        private System.Windows.Forms.TabPage DebugShit;
-        private System.Windows.Forms.GroupBox groupBox3;
-        private System.Windows.Forms.CheckBox checkBox15;
-        private System.Windows.Forms.CheckBox Debug_Controller_Latency;
-        private System.Windows.Forms.TabPage Misc;
-        private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.CheckBox checkBox14;
-        private System.Windows.Forms.CheckBox checkBox13;
-        private System.Windows.Forms.CheckBox checkBox11;
-        private System.Windows.Forms.CheckBox checkBox10;
-        private System.Windows.Forms.CheckBox checkBox9;
-        private System.Windows.Forms.CheckBox checkBox8;
-        private System.Windows.Forms.TabPage Graphical;
-        private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.CheckBox Disable_Spartan_Mode;
-        private System.Windows.Forms.CheckBox Hemi_SSAO;
-        private System.Windows.Forms.CheckBox Render_Lightmap_Shadows;
-        private System.Windows.Forms.CheckBox Exposure_Use_Light_Source;
-        private System.Windows.Forms.CheckBox Exposure_Use_Color_Source;
-        private System.Windows.Forms.CheckBox NoGore;
-        private System.Windows.Forms.CheckBox Effects_Distortion;
-        private System.Windows.Forms.TabPage Credit;
-        private System.Windows.Forms.Label Credits;
-        private System.Windows.Forms.TabPage Useable;
-        private System.Windows.Forms.CheckBox Auto_FOV;
-        private System.Windows.Forms.CheckBox killvoldisable;
-        private System.Windows.Forms.NumericUpDown Widescreen_Width;
-        private System.Windows.Forms.NumericUpDown Widescreen_Height;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Button Set_Widescreen_Fix;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Button Set_Forge_Map;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox forge_map_box_value;
-        private System.Windows.Forms.Button Max_FPS;
-        private System.Windows.Forms.Button hButton_Step3;
-        private System.Windows.Forms.NumericUpDown MaxFPSValue;
-        private System.Windows.Forms.NumericUpDown FoVNumber;
-        private System.Windows.Forms.TabControl tabControl1;
+        public System.Windows.Forms.TabPage DebugShit;
+        public System.Windows.Forms.GroupBox groupBox3;
+        public System.Windows.Forms.CheckBox checkBox15;
+        public System.Windows.Forms.CheckBox Debug_Controller_Latency;
+        public System.Windows.Forms.TabPage Misc;
+        public System.Windows.Forms.GroupBox groupBox2;
+        public System.Windows.Forms.CheckBox checkBox14;
+        public System.Windows.Forms.CheckBox checkBox13;
+        public System.Windows.Forms.CheckBox checkBox11;
+        public System.Windows.Forms.CheckBox checkBox10;
+        public System.Windows.Forms.CheckBox checkBox9;
+        public System.Windows.Forms.CheckBox checkBox8;
+        public System.Windows.Forms.TabPage Graphical;
+        public System.Windows.Forms.GroupBox groupBox1;
+        public System.Windows.Forms.CheckBox Disable_Spartan_Mode;
+        public System.Windows.Forms.CheckBox Hemi_SSAO;
+        public System.Windows.Forms.CheckBox Render_Lightmap_Shadows;
+        public System.Windows.Forms.CheckBox Exposure_Use_Light_Source;
+        public System.Windows.Forms.CheckBox Exposure_Use_Color_Source;
+        public System.Windows.Forms.CheckBox NoGore;
+        public System.Windows.Forms.CheckBox Effects_Distortion;
+        public System.Windows.Forms.TabPage Credit;
+        public System.Windows.Forms.Label Credits;
+        public System.Windows.Forms.TabPage Useable;
+        public System.Windows.Forms.CheckBox Auto_FOV;
+        public System.Windows.Forms.CheckBox killvoldisable;
+        public System.Windows.Forms.NumericUpDown Widescreen_Width;
+        public System.Windows.Forms.NumericUpDown Widescreen_Height;
+        public System.Windows.Forms.Label label3;
+        public System.Windows.Forms.Button Set_Widescreen_Fix;
+        public System.Windows.Forms.Label label2;
+        public System.Windows.Forms.Button Set_Forge_Map;
+        public System.Windows.Forms.Label label1;
+        public System.Windows.Forms.TextBox forge_map_box_value;
+        public System.Windows.Forms.Button Max_FPS;
+        public System.Windows.Forms.Button hButton_Step3;
+        public System.Windows.Forms.NumericUpDown MaxFPSValue;
+        public System.Windows.Forms.NumericUpDown FoVNumber;
+        public System.Windows.Forms.TabControl tabControl1;
     }
 }
 

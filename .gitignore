@@ -248,3 +248,7 @@
 /Bleam/obj/x64
 /.vs/Bleam/v14
 *.exe
+/Bleam/Properties/licenses.licx
+/Bleam/FancyShmancy.resx
+/Bleam/FancyShmancy.Designer.cs
+/Bleam/FancyShmancy.cs

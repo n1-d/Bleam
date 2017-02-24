@@ -15,7 +15,8 @@ namespace Bleam
 		{
 			Application.EnableVisualStyles();
 			Application.SetCompatibleTextRenderingDefault(false);
-			Application.Run(new hForm());
-		}
-	}
+            //Application.Run(new FancyShmancy());
+            Application.Run(new hForm());
+        }
+    }
 }
